@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhereInTheWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="u8R-hT-dEC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct:0 Wrong:0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn6-kv-lrg">
+                                <rect key="frame" x="192" y="20" width="167" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vz-PJ-d1l">
+                                <rect key="frame" x="16" y="557" width="343" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is this?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZj-An-4aa">
+                                        <rect key="frame" x="104.5" y="8" width="135.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yYN-Yh-1vP">
+                                        <rect key="frame" x="5" y="37" width="333" height="48"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qkc-fa-42M">
+                                                <rect key="frame" x="0.0" y="0.0" width="111" height="48"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bAm-Df-EI1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAU-vt-CZX">
+                                                <rect key="frame" x="111" y="0.0" width="111" height="48"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LPo-TU-9Cq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsH-rN-C9L">
+                                                <rect key="frame" x="222" y="0.0" width="111" height="48"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e9I-QS-tcu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="yYN-Yh-1vP" secondAttribute="bottom" constant="5" id="B1d-Hm-Nhy"/>
+                                    <constraint firstAttribute="trailing" secondItem="yYN-Yh-1vP" secondAttribute="trailing" constant="5" id="EKL-ob-YQa"/>
+                                    <constraint firstItem="yYN-Yh-1vP" firstAttribute="top" secondItem="DZj-An-4aa" secondAttribute="bottom" constant="5" id="KTg-Ou-Fem"/>
+                                    <constraint firstAttribute="height" constant="90" id="RMZ-9O-S1R"/>
+                                    <constraint firstItem="yYN-Yh-1vP" firstAttribute="leading" secondItem="9vz-PJ-d1l" secondAttribute="leading" constant="5" id="hn7-nS-Mvr"/>
+                                    <constraint firstItem="DZj-An-4aa" firstAttribute="top" secondItem="9vz-PJ-d1l" secondAttribute="top" constant="8" id="iWw-rr-UZ7"/>
+                                    <constraint firstItem="DZj-An-4aa" firstAttribute="centerX" secondItem="9vz-PJ-d1l" secondAttribute="centerX" id="tfi-tF-Lyh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9vz-PJ-d1l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2xV-gG-LgC"/>
+                            <constraint firstAttribute="trailing" secondItem="u8R-hT-dEC" secondAttribute="trailing" id="3di-dP-1q3"/>
+                            <constraint firstItem="9vz-PJ-d1l" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="AgX-SA-rmS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9vz-PJ-d1l" secondAttribute="bottom" constant="20" id="ITt-bH-pab"/>
+                            <constraint firstItem="Nn6-kv-lrg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="QlG-Mw-yuz"/>
+                            <constraint firstItem="Nn6-kv-lrg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Xsw-qP-B66"/>
+                            <constraint firstItem="u8R-hT-dEC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="e4p-3X-KdH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u8R-hT-dEC" secondAttribute="bottom" id="ecD-81-4D3"/>
+                            <constraint firstItem="u8R-hT-dEC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iCe-CI-hE2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="Qkc-fa-42M" id="VmM-OE-Rgh"/>
+                        <outlet property="button2" destination="eAU-vt-CZX" id="3tE-Y6-IZ6"/>
+                        <outlet property="button3" destination="CsH-rN-C9L" id="dln-CG-O30"/>
+                        <outlet property="mapView" destination="u8R-hT-dEC" id="DcE-wH-WI0"/>
+                        <outlet property="score" destination="Nn6-kv-lrg" id="pej-rn-ivH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
